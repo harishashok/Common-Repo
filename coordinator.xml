@@ -1,0 +1,14 @@
+**This script will provide the scheduler with the frequency of the workflow runs**
+
+<coordinator-app name= "d8_vis_analysis" xmlns="uri:oozie:coordinator:0.2"
+frequency= "${coord:days(7)}"
+start="${start}"
+end="${end}"
+timezone="America/New_York">
+
+<action>
+    <workflow>
+        <app-path>${application_path}</app-path>
+    </workflow>
+  </action>
+</coordinator-app>
